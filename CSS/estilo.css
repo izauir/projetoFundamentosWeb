@@ -1,0 +1,89 @@
+
+img.alta {
+  float: right;
+  height: 100px;
+  width: 100px;
+  margin-top: 39px;
+  left: 200px;
+}
+
+pre {
+  font-size: 1.2em;
+}
+.fonteAzul {
+  color: blue;
+}
+.oculta {
+  display: none;
+}
+.exibe {
+  display: inline;
+}
+.italico {
+  font-size: italic;
+}
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: Blue;
+  text-align: center;
+  background: linear-gradient(to right, blue, white);
+  text-transform: uppercase;
+  margin: 0px 0 0px 0;
+  
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: orangered;
+  font-family: inherit;
+}
+
+.menu{
+  background: orangered;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.hamburguer{
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  cursor: pointer;
+}
+.hamburguer:before,
+.hamburguer:after{
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hamburguer:before{
+  top: -10px;
+
+}
+
+.hamburguer:after{
+ bottom: -10px;
+
+}
+
+
