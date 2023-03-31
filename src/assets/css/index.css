@@ -1,3 +1,6 @@
+@import "input.css";
+@import "switch.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +9,10 @@
 
 :root {
   --primary: #003B6F;
+  --small: 200px;
+  --medium: 300px;
+  --large: 420px;
+  --xlarge: 500px;
 }
 
 .primary {
@@ -19,6 +26,11 @@
 .bold {
   font-weight: bold;
 }
+
+.small { width: var(--small); }
+.medium { width: var(--medium); }
+.large { width: var(--large); }
+.xlarge { width: var(--xlarge); }
 
 #app {
   display: flex;
@@ -52,6 +64,12 @@
   gap: 50px;
 }
 
+.action a {
+  outline: none;
+  text-decoration: none;
+  color: #000;
+}
+
 .title {
   font-weight: 700;
   font-size: 32px;
@@ -70,15 +88,15 @@
 }
 
 button {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  padding: 0 16px;
   gap: 8px;
   color: #FFF;
 
-  width: 118px;
   height: 40px;
 
   background: var(--primary);
