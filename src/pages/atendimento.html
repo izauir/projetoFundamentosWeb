@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
   <title>Atendimento</title>
   <style>
     .wrapper {
@@ -17,9 +17,11 @@
       gap: 8px;
       align-items: center;
     }
+
     table {
       width: 100%;
     }
+
     table .profile-icon {
       display: flex;
       background-color: var(--primary);
@@ -30,6 +32,7 @@
       width: 40px;
       border-radius: 100px;
     }
+
     /* .frame {
       height: 1000px;
     } */
@@ -42,7 +45,7 @@
           </button>
         `
 
-    function addPaciente () {
+    function addPaciente() {
       const table = document.getElementById('table')
       const paciente = document.getElementById('textPaciente')
       const urgencia = document.getElementById('urgencia').checked
@@ -60,10 +63,10 @@
         tdNome,
         tdBotao
       ] = [
-        row.insertCell(0),
-        row.insertCell(1),
-        row.insertCell(2)
-      ]
+          row.insertCell(0),
+          row.insertCell(1),
+          row.insertCell(2)
+        ]
 
       tdInicial.innerHTML = `<div class="profile-icon"><span>${String(paciente.value[0]).toUpperCase()}</span></div>`
       tdInicial.width = '56'
@@ -102,7 +105,7 @@
           <div class="action"><a href="../../">Home</a></div>
           <div class="action"><a href="./quemSomos.html">Quem Somos</a></div>
           <div class="action"><a href="./atendimento.html">Atendimento</a></div>
-          <div class="action"><a href="./">Médicos</a></div>
+          <div class="action"><a href="./medicos.html">Médicos</a></div>
           <div class="action"><a href="./">Fale Conosco</a></div>
         </div>
       </div>
@@ -110,20 +113,22 @@
       <div class="wrapper">
         <div class="input large">
           <label for="textPaciente">Paciente</label>
-          <input type="text" id="textPaciente"/>
+          <input type="text" id="textPaciente" />
         </div>
         <button class="mdc-button mdc-button--raised primary" onclick="addPaciente()">
           <span class="mdc-button__label">+ Adicionar Paciente</span>
         </button>
       </div>
+      <h1>Paciente em atendimento:</h1>
       <div class="wrapper">
         <label> Urgência</label>
         <div class="switch">
           <input type="checkbox" id="urgencia" /><label for="urgencia">Toggle</label>
         </div>
       </div>
+      <br/>
       <div class="title">Pacientes em espera:</div>
-      <hr/>
+      <hr />
 
       <table id="table">
       </table>
