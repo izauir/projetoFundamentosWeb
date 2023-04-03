@@ -1,0 +1,108 @@
+@import "input.css";
+@import "switch.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --primary: #003B6F;
+  --small: 200px;
+  --medium: 300px;
+  --large: 420px;
+  --xlarge: 500px;
+}
+
+.primary {
+  background-color: var(--primary) !important;
+}
+
+.color-primary {
+  color: var(--primary) !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.small { width: var(--small); }
+.medium { width: var(--medium); }
+.large { width: var(--large); }
+.xlarge { width: var(--xlarge); }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  height: 128px;
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 96px;
+}
+
+.actions {
+  display: flex;
+  gap: 50px;
+}
+
+.action a {
+  outline: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.text-wrapper {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  color: #FFF;
+
+  height: 40px;
+
+  background: var(--primary);
+  border-radius: 100px;
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
