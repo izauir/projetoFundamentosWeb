@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
   <title>Atendimento</title>
   <style>
     .wrapper {
@@ -17,9 +17,11 @@
       gap: 8px;
       align-items: center;
     }
+
     table {
       width: 100%;
     }
+
     table .profile-icon {
       display: flex;
       background-color: var(--primary);
@@ -30,67 +32,12 @@
       width: 40px;
       border-radius: 100px;
     }
+
     /* .frame {
       height: 1000px;
     } */
   </style>
-  <script>
-
-    const botaoAtender = `
-          <button class="mdc-button mdc-button--raised primary" onclick="atenderPaciente()">
-            <span class="mdc-button__label">Atender</span>
-          </button>
-        `
-
-    function addPaciente () {
-      const table = document.getElementById('table')
-      const paciente = document.getElementById('textPaciente')
-      const urgencia = document.getElementById('urgencia').checked
-
-      let row
-      if (urgencia) {
-        row = table.insertRow(0);
-        if (table.rows.length > 1) {
-          table.rows[1].cells[2].innerHTML = ''
-        }
-      } else row = table.insertRow(-1)
-
-      const [
-        tdInicial,
-        tdNome,
-        tdBotao
-      ] = [
-        row.insertCell(0),
-        row.insertCell(1),
-        row.insertCell(2)
-      ]
-
-      tdInicial.innerHTML = `<div class="profile-icon"><span>${String(paciente.value[0]).toUpperCase()}</span></div>`
-      tdInicial.width = '56'
-
-      tdNome.innerText = paciente.value
-      if (table.rows.length === 1 || urgencia) {
-        tdBotao.id = new Date().toISOString();
-        tdBotao.innerHTML = botaoAtender
-        tdBotao.align = 'right'
-      }
-
-      paciente.value = ''
-    }
-
-    function atenderPaciente(index) {
-      const table = document.getElementById('table')
-      table.deleteRow(0)
-      if (table.rows.length >= 1) {
-        const tdBotaoNext = table
-          .rows[0]
-          .cells[2]
-
-        tdBotaoNext.innerHTML = botaoAtender
-        tdBotaoNext.align = 'right'
-      }
-    }
-  </script>
+  <script src="../assets/js/atendimento.js"></script>
 </head>
 
 <body>
@@ -99,18 +46,18 @@
       <div class="header">
         <img src="../assets/img/unaspLogo.png" />
         <div class="actions">
-          <div class="action"><a href="/index.html">Home</a></div>
+          <div class="action"><a href="../../">Home</a></div>
           <div class="action"><a href="./quemSomos.html">Quem Somos</a></div>
           <div class="action"><a href="./atendimento.html">Atendimento</a></div>
-          <div class="action"><a href="./">Médicos</a></div>
-          <div class="action"><a href="./">Fale Conosco</a></div>
+          <div class="action"><a href="./medicos.html">Médicos</a></div>
+          <div class="action"><a href="./faleConosco.html">Fale Conosco</a></div>
         </div>
       </div>
       <div class="title">Atendimento</div>
       <div class="wrapper">
         <div class="input large">
           <label for="textPaciente">Paciente</label>
-          <input type="text" id="textPaciente"/>
+          <input type="text" id="textPaciente" />
         </div>
         <button class="mdc-button mdc-button--raised primary" onclick="addPaciente()">
           <span class="mdc-button__label">+ Adicionar Paciente</span>
@@ -123,7 +70,7 @@
         </div>
       </div>
       <div class="title">Pacientes em espera:</div>
-      <hr/>
+      <hr />
 
       <table id="table">
       </table>
