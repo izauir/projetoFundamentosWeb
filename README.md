@@ -2,7 +2,6 @@
   <h3 align="center">Clínica Unasp</h3>
 
   <p align="center">
-    <br />
   </p>
 </p>
 
