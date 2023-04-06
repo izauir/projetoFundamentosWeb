@@ -12,5 +12,5 @@ Um simples site para nosso projeto de faculdade, Clínica Unasp.
 <!-- CONTACT -->
 ## Alunos
 
-Izauir Guilherme B. Dos Santos - RA: 175353
+Izauir Guilherme B. Dos Santos - RA: 175353 |
 Gabriel Fernando Michelan - RA: 059009
