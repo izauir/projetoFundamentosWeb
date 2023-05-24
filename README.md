@@ -7,7 +7,8 @@
 
 ## Sobre o projeto
 
-Um simples site para nosso projeto de faculdade, Clínica Unasp.
+Um simples site para nosso projeto de faculdade, Clínica Unasp. <br>
+O site pode ser acessado pelo github pages, <a href="url">[clique aqui](https://izauir.github.io/projetoFundamentosWeb/)</a>.
 
 <!-- CONTACT -->
 ## Alunos
